@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 from sklearn.metrics import r2_score
 from sklearn.metrics import make_scorer
@@ -81,7 +82,7 @@ print "Boston housing dataset has {} data points with {} variables each.".format
 print "Top 5 rows:"
 print data[:5]
 
-minimum_price = prices.min()
+minimum_price = prices.as_matrix().min()
 maximum_price = prices.max()
 mean_price = prices.mean()
 median_price = prices.median()
